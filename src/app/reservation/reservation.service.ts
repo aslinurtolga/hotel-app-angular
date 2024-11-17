@@ -19,8 +19,9 @@ export class ReservationService {
   // create
   addReservations(reservation: Reservation): void {
     this.reservations.push(reservation);
+    console.log(this.reservations);
   }
-  // update
+  // delete
   deleteReservation(id: string): void {
     let index = this.reservations.findIndex((res) => res.id === id);
     this.reservations.splice(index, 1);
